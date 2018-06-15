@@ -65,4 +65,11 @@ public class GirlController {
     public void girlTwo(){
         girlService.insertTwo();
     }
+
+    @GetMapping (value = "/girls/age")
+    public List<Girl> girlListAge(){
+
+        return girlRepository.findByAge(18);
+    }
+
 }
